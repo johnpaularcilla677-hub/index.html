@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Barangay Clearance Login</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #b71c1c, #ff5252);
+    }
+
+    .login-card {
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+      width: 360px;
+      padding: 40px 30px;
+      text-align: center;
+      animation: fadeIn 0.6s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(-15px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    h2 {
+      color: #b71c1c;
+      margin-bottom: 25px;
+      font-size: 22px;
+    }
+
+    label {
+      display: block;
+      text-align: left;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: #444;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 18px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 15px;
+      transition: 0.2s;
+    }
+
+    input:focus {
+      border-color: #b71c1c;
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(183, 28, 28, 0.15);
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #b71c1c;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: #8b0000;
+    }
+
+    .links {
+      margin-top: 15px;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    .links a {
+      color: #b71c1c;
+      font-weight: 600;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .links a:hover {
+      color: #ff5252;
+    }
+
+    .admin-link {
+      margin-top: 20px;
+      display: block;
+      color: #333;
+      font-weight: 600;
+      text-decoration: none;
+      background: #f4f4f4;
+      padding: 10px;
+      border-radius: 8px;
+      transition: background 0.2s;
+    }
+
+    .admin-link:hover {
+      background: #ffeaea;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-card">
+    <h2>Barangay Clearance System</h2>
+
+    <form action="homepage.html" method="post">
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" placeholder="Enter username" required>
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" placeholder="Enter password" required>
+
+      <button type="submit">Log In</button>
+    </form>
+
+    <div class="links">
+      Don't have an account? <a href="register.html">Click here to register</a>
+    </div>
+
+    <!-- ✅ Admin Panel Link -->
+    <a href="admin.html" class="admin-link">Go to Admin Panel</a>
+  </div>
+</body>
+</html>

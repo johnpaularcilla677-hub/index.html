@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Business Permit Application</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f2f5;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+      padding-top: 40px;
+    }
+
+    .application-container {
+      background: white;
+      width: 400px;
+      padding: 30px 40px;
+      border-radius: 10px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #2e8b57;
+      margin-bottom: 25px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      font-weight: bold;
+      margin-top: 15px;
+      margin-bottom: 6px;
+      color: #333;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    select {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+      transition: border-color 0.3s ease;
+    }
+
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="number"]:focus,
+    select:focus {
+      border-color: #2e8b57;
+      outline: none;
+    }
+
+    textarea {
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+      resize: vertical;
+      min-height: 80px;
+    }
+
+    input[type="submit"] {
+      margin-top: 25px;
+      background-color: #2e8b57;
+      color: white;
+      padding: 14px;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1.1rem;
+      transition: background-color 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #3cb371;
+    }
+
+    .back-link {
+      display: block;
+      margin-top: 20px;
+      text-align: center;
+      color: #2e8b57;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="application-container">
+    <h2>Business Permit Application</h2>
+    <form action="/submit-business-permit" method="POST">
+      <label for="ownerName">Owner's Full Name</label>
+      <input type="text" id="ownerName" name="ownerName" placeholder="Enter full name" required />
+
+      <label for="businessName">Business Name</label>
+      <input type="text" id="businessName" name="businessName" placeholder="Enter business name" required />
+
+      <label for="businessType">Business Type</label>
+      <select id="businessType" name="businessType" required>
+        <option value="" disabled selected>Select business type</option>
+        <option value="retail">Retail</option>
+        <option value="food">Food Service</option>
+        <option value="manufacturing">Manufacturing</option>
+        <option value="services">Services</option>
+        <option value="others">Others</option>
+      </select>
+
+      <label for="businessAddress">Business Address</label>
+      <input type="text" id="businessAddress" name="businessAddress" placeholder="Enter business address" required />
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" placeholder="Enter email" required />
+
+      <label for="phone">Contact Number</label>
+      <input type="text" id="phone" name="phone" placeholder="Enter phone number" required />
+      
+      <label for="description">Business Description</label>
+      <textarea id="description" name="description" placeholder="Brief description about your business"></textarea>
+
+   <a href="ty.html" class="back-link">SUBMIT</a>
+
+  </div>
+</body>
+</html>
